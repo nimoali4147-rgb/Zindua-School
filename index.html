@@ -1,12 +1,274 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zindua School - Learn to code in Africa</title>
 
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Zindua School - Learn to code in Africa</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+                rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+        <style type="text/tailwincss">
+                @theme {
+    --color-danger: #f56c6c;
+    --color-ink: #606266;
+    --color-mist: #f7f8fa;
+
+
+    --font-heading: "Inter", sans-serif;
+    --font-sans: "Inter", sans-serif;
+
+}
+
+    body{
+        font-family:  "Inter", sans-serif; color: #0a0f1a;
+
+    }
+
+    
+        .mobile-menu {
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            transition: max-height 0.35s ease, opacity 0.3s ease;
+        }
+        #nav-toggle:checked ~ .mobile-menu {
+            max-height: 500px; opacity: 1;
+        }
+        .ham-bar { transition: transform 0.3s ease, opacity 0.2s ease; }
+        #nav-toggle:checked ~ nav .ham-bar:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+        #nav-toggle:checked ~ nav .ham-bar:nth-child(2) { opacity: 0; transform: scaleX(0); }
+        #nav-toggle:checked ~ nav .ham-bar:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+ </style>
 </head>
-<body>
-    <h1>Zindua School</h1>
+
+<body class="bg-sky-100">
+        <header class="sticky top-0 bg-white border-b border-border">
+                <input type="checkbox" id="nav-toggle" class="hidden">
+                <nav class="max-w-16xl mx-auto px-6 py-3 flex items-center justify-between gap-8">
+                        <a href="#" class="flex flex-col leading-none shrink-0">
+                                <span class="text-danger text-6xl font-bold tracking-tight">Zindua</span>
+                                <span class="text-ink text-xs font-medium tracking-widest -mt-0.5">School</span>
+                        </a>
+
+                        <ul class="hidden md:flex items-center gap-4 ml-auto">
+                                <li>
+                                        <a href="#programs"
+                                                class="flex items-center gap-1 px-3 py-2 hover:text-red-500 transition-colors duration-150">
+                                                Programs
+                                        </a>
+                                </li>
+
+                                <li>
+                                        <a href="#plans"
+                                                class="flex items-center gap-1 px-3 py-2 hover:text-red-500 transition-colors duration-150">
+                                                Financing Plans
+                                        </a>
+                                </li>
+
+                                <li>
+                                        <a href="#resources"
+                                                class="flex items-center gap-1 px-3 py-2 hover:text-red-500 transition-colors duration-150">
+                                                Resources
+                                        </a>
+                                </li>
+
+                                <li>
+                                        <a href="#more"
+                                                class="flex items-center gap-1 px-3 py-2 hover:text-red-500 transition-colors duration-150">
+                                                More
+                                        </a>
+                                </li>
+
+                                <li>
+                                        <a href="#"
+                                                class="flex items-center gap-1 px-3 py-2 hover:text-red-500 transition-colors duration-150">
+                                                Login
+                                        </a>
+                                </li>
+
+                                <li>
+                                        <a href="#programs"
+                                                class="flex items-center justify-center bg-red-500 text-white font-semibold px-5 py-2 rounded-md hover:bg-red-600 transition-colors duration-150">
+                                                Apply Today
+                                        </a>
+                                </li>
+                        </ul>
+                        <label for="nav-toggle"
+                                class="md:hidden flex flex-col items-center justify-center gap-1.5 p-2 rounded cursor-pointer"
+                                aria-label="Toggle menu">
+                                <span class="ham-bar block w-6 h-0.5 bg-ink origin-center"></span>
+                                <span class="ham-bar block w-6 h-0.5 bg-ink origin-center"></span>
+                                <span class="ham-bar block w-6 h-0.5 bg-ink origin-center"></span>
+                        </label>
+                </nav>
+
+                <div class="mobile-menu md:hidden bg-white border-t">
+                        <ul class="flex flex-col gap-3 p-6">
+
+                                <li><a href="#programs"
+                                                class="flex items-center px-3 py-2 hover:text-red-500">Programs</a></li>
+
+                                <li><a href="#plans" class="flex items-center px-3 py-2 hover:text-red-500">Financing
+                                                Plans</a></li>
+
+                                <li><a href="#resources"
+                                                class="flex items-center px-3 py-2 hover:text-red-500">Resources</a>
+                                </li>
+
+                                <li><a href="#more" class="flex items-center px-3 py-2 hover:text-red-500">More</a></li>
+
+                                <li><a href="#" class="flex items-center px-3 py-2 hover:text-red-500">Login</a></li>
+
+                                <li>
+                                        <a href="#programs"
+                                                class="flex items-center justify-center bg-red-500 text-white px-5 py-3 rounded-md hover:bg-red-600">
+                                                Apply Today
+                                        </a>
+                                </li>
+
+                        </ul>
+                </div>
+        </header>
+        <p class="mt-6 max-w-2xl text-lg leading-8 text-gray-600">
+                <span class="font-semibold text-black-900">
+                        Zindua your career in tech
+                </span>
+                at Kenya's top-rated tech accelerator.
+                Upskill into
+                <span class="font-semibold text-red-600">Software Development</span>
+                or
+                <span class="font-semibold text-red-600">Data Science</span>,
+                or specialise in
+                <span class="font-semibold text-red-600">AI</span>,
+                <span class="font-semibold text-red-600">DevOps</span>, and
+                <span class="font-semibold text-red-600">Data Engineering</span>
+                through immersive mentor-led programs.
+                We provide the technical depth to transform beginners into professionals
+                and professionals into specialists, powered by
+                <span class="font-medium text-gray-900">
+
+                </span>
+                and
+                <span class="font-medium text-red-900">
+                        cloud-first learning.
+                </span>
+
+
+        </p>
+
+        <section>
+                <img src="asets/photo.jpeg" alt="student" width="400 gr">
+
+                <h4 class="font-semibold flex flex-row ml-3 mt-6">ZINDUA CODING SCHOOL:<div class="text-cyan-400">4.9/5
+                                RATING(80+ REVIEWS)</div>
+                </h4>
+                <p class="flex flex-row font-bold text-4xl m-3 mb-1">Zindua your career in tech at
+                <div class="text-red-600 text-3xl m-4">Kenyas top-rated tech accelerator</div>
+                </p>
+                <p class="m-4">Upskill into Software or Data, or specialise in AI,DevOps, or Data Engineering through
+                        our immersive<br>
+                        mentor-led programs .We offer technical depth to turn begineers into pros and pros into
+                        specialists; <br>
+                        now intergrating <b>AI-assisted coding</b> and <b>cloud-anchored curricula</b></p>
+                <div class="flex flex-row">
+                        <button
+                                class="bg-red-400 px-10 py-2 m-2 rounded hover:bg-cyan-600 duration-200 flex items-center">Browse
+                                programs</button>
+                        <button class="border-3 border-red-400 px-10 py-2 m-2 rounded">Apply Now</button>
+                </div>
+        </section>
+
+        <section class="bg-black text-white border-1 p-10 flex  items-center gap-6 items-xl">
+                <h4 class="flex flex-column items-center">Graduates work at top companies</h4>
+                <p>NCBA</p>
+                <p>Delloitte</p>
+                <p>HUAWEI</p>
+        </section>
+
+        <main id="main">
+                <h3 class="font-bold text-center m-6 text-lg">Find your tech career here</h3>
+                <section class="grid grid-cols-3 grid-rows-3 gap-4 m-4 max-md:flex flex-col items-center">
+
+                        <div class="program-card font-semibold">
+                                <img src="asets/image1.png" alt="Software Engineering">
+                                <p class="category">Core • Career Launch</p>
+                                <h3>Software Engineering</h3>
+                                <p>Graduate in 8 months (part-time) or 5 months (full-time). Become a certified
+                                        frontend, backend, or full-stack developer.</p>
+                                <button class="border-3 border-red-600 px-25 py-2 m-2 rounded">Learn More →</button>
+                        </div>
+
+                        <div class="program-card font-semibold">
+                                <img src="asets/imge2.png" alt="Data Science">
+                                <p class="category">Core • Career Launch</p>
+                                <h3>Data Science</h3>
+                                <p>Graduate in 8 months (part-time) or 5 months (full-time). Become a certified data
+                                        scientist, data analyst, or AI/ML Engineer.</p>
+                                <button class="border-3 border-red-600 px-25 py-2 m-2 rounded">Learn More →</button>
+
+                        </div>
+
+                        <div class="program-card font-semibold">
+                                <img src="asets/image3.png" alt="Data Analytics">
+                                <p class="category">Focus • Accelerated Skill-Up</p>
+                                <h3>Data Analytics</h3>
+                                <p>Graduate in 5 months (part-time) or 3 months (full-time). Become a data analyst or
+                                        business intelligence (BI) analyst.</p>
+                                <button class="border-3 border-red-600 px-25 py-2 m-2 rounded">Learn More →</button>
+                        </div>
+
+                        <div class="program-card font-semibold">
+                                <img src="asets/image4.png" alt="Frontend Development">
+                                <p class="category">Focus • Accelerated Skill-Up</p>
+                                <h3>Frontend Development</h3>
+                                <p>Graduate in 5 months (part-time) or 3 months (full-time). Become a certified web
+                                        developer or frontend engineer.</p>
+                                <button class="border-3 border-red-600 px-25 py-2 m-2 rounded">Learn More →</button>
+                        </div>
+
+                        <div class="program-card font-semibold">
+                                <img src="asets/imag5.png" alt="DevOps Engineering">
+                                <p class="category">Specialisation • For Developers</p>
+                                <h3>DevOps Engineering</h3>
+                                <p>For developers looking to niche into Cloud & DevOps. Graduate in 3 months part-time.
+                                        Azure DevOps Engineer certification.</p>
+                                <button class="border-3 border-red-600 px-25 py-2 m-2 rounded">Learn More →</button>
+                        </div>
+
+                        <div class="program-card font-semibold">
+                                <img src="asets/image6.png" alt="Data Engineering">
+                                <p class="category">Specialisation • For Developers</p>
+                                <h3>Data Engineering</h3>
+                                <p>For data scientists & analysts looking to niche into Big Data. Graduate in 3 months
+                                        part-time. AWS Data Engineer certification.</p>
+                                <button class="border-3 border-red-600 px-25 py-2 m-2 rounded">Learn More →</button>
+                        </div>
+
+                        <div class="program-card font-semibold">
+                                <img src="asets/image7.png" alt="Cybersecurity">
+                                <p class="category">Core • Career Launch</p>
+                                <h3>Cybersecurity</h3>
+                                <p>Graduate in 6 months part-time. Concentrate in ethical hacking, information security,
+                                        or cyber risk management with a guaranteed internship.</p>
+                                <button class="border-3 border-red-600 px-25 py-2 m-2 rounded">Learn More →</button>
+                        </div>
+
+                        <div class="program-card font-semibold">
+                                <img src="asets/image8.png" alt="AI Engineering">
+                                <p class="category">Coming Soon</p>
+                                <h3>AI Engineering</h3>
+                                <p>For developers & data enthusiasts looking to build scalable AI systems. Graduate in 3
+                                        months part-time. AWS AI Practitioner certification.</p>
+                                <button class="border-3 border-red-600 px-25 py-2 m-2 rounded">Learn More →</button>
+                        </div>
+                        </div>
+                </section>
+        </main>
+
 </body>
+
 </html>
